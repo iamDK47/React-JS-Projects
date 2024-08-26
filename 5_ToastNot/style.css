@@ -164,7 +164,7 @@ h1 {
 
 .toast.toast-warning {
    background: #ead994;
-}
+} 
 
 .toast.toast-warning .toast-progress {
    background-color: #f1c40f;
@@ -216,4 +216,4 @@ h1 {
    100% {
        width: 0%;
    }
-}
+} 
