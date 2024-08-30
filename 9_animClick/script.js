@@ -1,4 +1,4 @@
-const button = document.getElementById('#btn_id')
+const button = document.getElementById('#btn_id2')
 
 button.addEventListener('click', change)
 

@@ -10,6 +10,9 @@ let icon = {
 }
 
 let showToast = (message = 'string', toastType = 'string',duration = 5000) => {
+   // if (
+   //    !Object.keys(icon).includes(toastType))
+   //    toastType = "info";
 
    let box = document.createElement('div')
    box.classList.add('toast',`toast-${toastType}`)
