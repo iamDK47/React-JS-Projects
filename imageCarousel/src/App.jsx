@@ -1,23 +1,130 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { useState } from 'react';
+
+// const App = () => {
+//   return (
+//     <Carousel>
+//       <div>
+//          <img src="https://www.pexels.com/photo/bread-and-towel-on-table-16471876/" />
+//          <p className="legend">Legend 1</p>
+//        </div>
+//        <div>
+//          <img src="https://www.pexels.com/photo/woman-lying-on-bed-with-laptop-and-candle-18884059/" />
+//          <p className="legend">Legend 2</p>
+//        </div>
+//       <div>
+//       <img src="https://hcn.imgix.net/uploads/2021/07/a.jpg?auto=format%2Ccompress&ixlib=php-3.3.1&w=1200&s=132ebe90ea08618fbcdde31ce0461c67" />
+//       <p className="legend">Legend 3</p>
+//      </div>
+//    </Carousel>
+//   );
+// };
+// export default App
+
+// const App = () => {
+//   const [imgIndex ,setImgIndex] = useState()
+
+//   const imgArray = [
+
+//     "https://www.pexels.com/photo/bread-and-towel-on-table-16471876/",
+
+//     "https://www.pexels.com/photo/woman-lying-on-bed-with-laptop-and-candle-18884059/",
+
+//     "https://hcn.imgix.net/uploads/2021/07/a.jpg?auto=format%2Ccompress&ixlib=php-3.3.1&w=1200&s=132ebe90ea08618fbcdde31ce0461c67" 
+
+//   ]
+
+//   const prevImg = () => {
+    
+//     let newIndex = imgIndex - 1
+//     setImgIndex( newIndex )
+//   }
+
+//   const nextImg = () => {
+
+//     let newIndex = imgIndex + 1
+//     setImgIndex( newIndex )
+      
+//       setImgIndex()
+//     }
+
+//   return (
+//     <div className="max-h-screen flex flex-col items-center justify-center">
+//       <div className="flex items-center space-x-4">
+//         <button
+//         onClick={prevImg}
+//         className="px-4 py-2 bg-blue-500 text-white rounded"
+//         ></button>
+//       </div>
+//         <img
+//         className="max-w-full max-h-[500px] object-contain"
+//         src={imgArray[imgIndex]}
+//         />      
+//       <div>
+//         <button
+//         className="px-4 py-2 bg-blue-500 text-white rounded"
+//         onClick={nextImg}
+//         ></button>
+//       </div>
+
+//     </div>
+//   )}
+
+// export default App;
+
 
 const App = () => {
-  return (
-    <Carousel>
-      <div>
-         <img src="https://www.google.com/imgres?q=hitler&imgurl=https%3A%2F%2Fassets.editorial.aetnd.com%2Fuploads%2F2009%2F10%2Fadolf-hitler-gettyimages-119505258.jpg&imgrefurl=https%3A%2F%2Fwww.history.com%2Ftopics%2Fworld-war-ii%2Fadolf-hitler-1&docid=qTgFi8HP-OiUlM&tbnid=zEZy2VheacuOCM&vet=12ahUKEwjI_eblxaWKAxWCBNsEHewGHhsQM3oECGUQAA..i&w=1920&h=1080&hcb=2&itg=1&ved=2ahUKEwjI_eblxaWKAxWCBNsEHewGHhsQM3oECGUQAA" />
-         <p className="legend">Legend 1</p>
-       </div>
-       <div>
-         <img src="https://www.google.com/imgres?q=hitler&imgurl=https%3A%2F%2Fwww.bbc.co.uk%2Fstaticarchive%2F71b6b5e03f40e4f5466d251fb681630bd5e4e927.jpg&imgrefurl=https%3A%2F%2Fwww.bbc.co.uk%2Fhistory%2Fpeople%2Fadolf_hitler&docid=12YBYh-R5zwvqM&tbnid=lCby1qvQI9vv-M&vet=12ahUKEwjI_eblxaWKAxWCBNsEHewGHhsQM3oECBYQAA..i&w=640&h=360&hcb=2&ved=2ahUKEwjI_eblxaWKAxWCBNsEHewGHhsQM3oECBYQAA" />
-         <p className="legend">Legend 2</p>
-       </div>
-      <div>
-      <img src="https://www.google.com/imgres?q=hitler&imgurl=https%3A%2F%2Fcdn.britannica.com%2F57%2F146057-050-697A470D%2FAdolf-Hitler.jpg&imgrefurl=https%3A%2F%2Fwww.britannica.com%2Ftopic%2FFuhrer&docid=TEIzk-DPjMIS3M&tbnid=y75MWJ_itNat0M&vet=12ahUKEwjI_eblxaWKAxWCBNsEHewGHhsQM3oECEsQAA..i&w=528&h=800&hcb=2&ved=2ahUKEwjI_eblxaWKAxWCBNsEHewGHhsQM3oECEsQAA" />
-      <p className="legend">Legend 3</p>
-     </div>
-   </Carousel>
+  const [currentImgIndex, setCurrentImgIndex] = useState(0);
+
+  const imgArray = [
+    "https://dreamlandadventuretourism.com/wp-content/uploads/2023/12/img-world-ticket-from-dream.webp",
+    "https://www.pexels.com/photo/woman-lying-on-bed-with-laptop-and-candle-18884059/",
+    "https://hcn.imgix.net/uploads/2021/07/a.jpg?auto=format%2Ccompress&ixlib=php-3.3.1&w=1200&s=132ebe90ea08618fbcdde31ce0461c67"
+  ];
+
+  const prevImg = () => {
+    // Cycle backwards through images, wrapping around to the end if at the beginning
+    setCurrentImgIndex((prevIndex) => 
+      prevIndex === 0 ? imgArray.length - 1 : prevIndex - 1
   );
 };
-export default App
+console.log(imgArray.length)
+
+const nextImg = () => {
+  // Cycle forwards through images, wrapping around to the start if at the end
+  setCurrentImgIndex((prevIndex) => 
+    // (prevIndex + 1) % imgArray.length
+      prevIndex === (imgArray.length - 1) ? 0 : prevIndex + 1
+    );
+  };
+
+  return (
+    <div className="max-h-screen flex flex-col items-center justify-center">
+      <div className="flex items-center space-x-4">
+        <button 
+          onClick={prevImg} 
+          className="px-4 py-2 bg-blue-500 text-white rounded"
+        >
+          Previous
+        </button>
+        
+        <img 
+          src={imgArray[currentImgIndex]} 
+          alt={`Slide ${currentImgIndex + 1}`} 
+          className="max-w-full max-h-[500px] object-contain"
+        />
+        
+        <button 
+          onClick={nextImg} 
+          className="px-4 py-2 bg-blue-500 text-white rounded"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default App;
