@@ -21,7 +21,7 @@ const App = () => {
    </Carousel>
   );
 };
-export default App
+// export default App
 
 
 
