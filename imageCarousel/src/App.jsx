@@ -18,7 +18,7 @@ const App = () => {
       <img src="https://hcn.imgix.net/uploads/2021/07/a.jpg?auto=format%2Ccompress&ixlib=php-3.3.1&w=1200&s=132ebe90ea08618fbcdde31ce0461c67" />
       <p className="legend">Legend 3</p>
      </div>
-   </Carousel>
+   </Carousel>//
   );
 };
 // export default App
