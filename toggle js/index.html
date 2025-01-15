@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Effect Example</title>
+    <style>
+        #myDiv {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggleButton">Toggle Div Visibility</button>
+
+    <div id="myDiv">This is a toggleable div!</div>
+
+    <script>
+       const message = document.querySelector("#myDiv")
+       const button = document.querySelector("#toggleButton")
+
+       button.addEventListener("click" , function() {
+          if ( message.style.display === "" || message.style.display === "none"){
+            message.style.display = "block"
+          } else {
+            message.style.display = "none"
+          }
+       })
+    </script>
+
+</body>
+</html>
