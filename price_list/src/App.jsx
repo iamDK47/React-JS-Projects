@@ -16,16 +16,14 @@ function App() {
   return (
     <>
       <div>
-      { arr.map((name , index) =>
-
-        // <button  key={index}>
-        //   {name}
-        // </button>
-      <Btn name = {name} /> 
-    )
-      }
+        { arr.map((name , index) =>
+          // <button  key={index}>
+          //   {name}
+          //   </button>
+            <Btn name = {name} /> 
+          )
+        }
       </div>
-      
     </>
   )
 }

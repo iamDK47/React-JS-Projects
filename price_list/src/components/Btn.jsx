@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Btn({name}) {
+function Btn({name , change}) {
+
+  const [sign, setSign] = useState()
+
+  const letter = ['x' , 'y']
+  
+  let change = () => {
+
+  }
+
   return (
     <div>
-     {name}
+      <button
+      
+      >
+        {name} 
+      </button>
+    
     </div>
   )
 }
