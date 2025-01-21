@@ -7,13 +7,15 @@ import Btn from './components/btn'
 function App() {
   const [x, setX] = useState(0)
 
-  const arr = ["faizi" , "saffi" ,"anser" , "rahib"]
-
+  const arr = ["faizi" ,"saffi" ,"anser" ,"rahib"]
+  const array = ["X " ," Y"]
+  
   return (
     <>
       <div>
-        { arr.map((name , index) =>
-          <Btn name = {name} click = {} /> )}
+        { arr.map((name, id) =>
+          <Btn  name={name} id={id} /> )
+        }
       </div>
     </>
   )
