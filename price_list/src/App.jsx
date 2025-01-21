@@ -5,11 +5,7 @@ import './App.css'
 import Btn from './components/btn'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  let change = () => {
-    setCount()
-  }
+  const [x, setX] = useState(0)
 
   const arr = ["faizi" , "saffi" ,"anser" , "rahib"]
 
@@ -17,12 +13,7 @@ function App() {
     <>
       <div>
         { arr.map((name , index) =>
-          // <button  key={index}>
-          //   {name}
-          //   </button>
-            <Btn name = {name} /> 
-          )
-        }
+          <Btn name = {name} click = {} /> )}
       </div>
     </>
   )

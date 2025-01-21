@@ -1,23 +1,17 @@
 import React, { useState } from 'react'
 
-function Btn({name , change}) {
+function Btn({name , click}) {
 
-  const [sign, setSign] = useState()
-
-  const letter = ['x' , 'y']
+  const [clicked, setClicked] = useState(true)
   
-  let change = () => {
-
-  }
 
   return (
     <div>
-      <button
-      
-      >
+      <button onClick={() => {setClicked(prev => !prev)}} >
         {name} 
+        {clicked ? " X ":" Y "}
+        
       </button>
-    
     </div>
   )
 }
