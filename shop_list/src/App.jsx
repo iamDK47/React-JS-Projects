@@ -7,18 +7,23 @@ import ListItem from './components/listItem'
 function App() {
   const [item, setItem] = useState('')
   const [array, setArray] = useState([])
-  // const [active, setActive] = useState(null)
+  const [activeEdit, setActiveEdit] = useState(false)
+  const [edit, setEdit] = useState(false)
 
   const addItem = () => {
-    setArray([...array, item])
-    setItem('')
-    if(item===''){
-      console.log('type something')
+    if(item.length > 0){
+      setArray( [{id : Date.now() ,item}, ...array])
+      // console.log(array[item.id])
+      setItem('')
     }
-    }
+  }
 
     const del = (id) => {
       setArray(array.filter((elem,index) => id !== index))
+    }
+
+    const change = (editId) => {
+      setEdit()
     }
 
   return (
@@ -37,12 +42,14 @@ function App() {
         </button>
         <div>
           {array.map((list,index) =>
-          <div key={index}>
-            {list}
+          <div key={list.id}>
+            {list.item}
             <ListItem 
             Delete={del} 
             eleID={index}
-            
+            // editId={index}
+            // activeEdit={change}
+            // edit={activeEdit}
             />
             </div>
           )}
