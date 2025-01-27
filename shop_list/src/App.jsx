@@ -23,7 +23,7 @@ function App() {
     }
 
     const change = (editId) => {
-      setEdit()
+      setEdit(prev => !prev)
     }
 
   return (
@@ -47,9 +47,9 @@ function App() {
             <ListItem 
             Delete={del} 
             eleID={index}
-            // editId={index}
-            // activeEdit={change}
-            // edit={activeEdit}
+            editId={index}
+            activeEdit={change}
+            edit={edit}
             />
             </div>
           )}
