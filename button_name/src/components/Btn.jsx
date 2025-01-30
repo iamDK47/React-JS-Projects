@@ -1,16 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-function Btn({name, thisId, afterClick,index }) {
+function Btn({name, id, isActive, click}) {
 
   return (
-    <>
     <div>
-      <button onClick={() => afterClick(index)}>
+      <button onClick={() => click(id)}>
         {name}
-        {thisId ? " Y" : " X"}
+        {isActive ? " Y" : " X"}
       </button>
     </div>
-    </>
   )
 }
 
