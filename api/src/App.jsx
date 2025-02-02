@@ -12,7 +12,7 @@ function App() {
       const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
       const namee = await data.json()
       setPoki(namee)
-      setImg(namee.sprites.back_female)
+      setImg(namee.sprites.back_default)
     }; 
     // if(hasClicked){
     //   setHasClicked(false)
@@ -42,7 +42,11 @@ function App() {
           CLICK
         </button>
         <div>
-          <img src={img}/>
+          {
+            poki && (
+              <img src={img}/>
+            )
+          }
         </div>
       </div>
     </>
