@@ -3,7 +3,6 @@ import './App.css'
 
 function App() {
   const [name, setName] = useState('')
-  // const [poki, setPoki] = useState(null)
   const [img, setImg] = useState('')
   const [hasClicked, setHasClicked] = useState(false)
 
@@ -23,10 +22,6 @@ function App() {
       setHasClicked(false)
     }
   },[hasClicked])
-
-  // fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
-  // .then(data => data.json())
-  // .then(data => setPoki(data))
 
   const show = () => {
     setHasClicked(true)
