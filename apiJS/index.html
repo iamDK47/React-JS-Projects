@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  
+ </style>
+</head>
+<body>
+  <div class="main">
+   <div class="lol">
+    <input
+    id="input"
+    type="text"
+    >
+    <button
+    id="btn"
+    >Click</button>
+   </div>
+   <div>
+    <img id="pokimon" src="">
+    <p id="error"></p>
+   </div>
+  </div>
+
+  <script>
+
+   document.getElementById('btn').addEventListener('click', () => {
+
+    const name = document.getElementById('input').value.toLowerCase()
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+    .then(response => {
+     if(!response){
+      throw new Error("error fetching data")
+     }
+     return response.json()
+    })
+    .then(data => {
+     const img = data.sprites.front_default 
+     document.getElementById('pokimon').src = img
+     document.getElementById('error').textContent = ''
+    })
+    .catch(error => console.log('error occured while fetching data '))
+   })
+
+  </script>
+</body>
+</html>
