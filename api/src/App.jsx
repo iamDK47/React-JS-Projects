@@ -3,20 +3,25 @@ import './App.css'
 
 function App() {
   const [name, setName] = useState('')
-  const [poki, setPoki] = useState(null)
+  // const [poki, setPoki] = useState(null)
   const [img, setImg] = useState('')
   const [hasClicked, setHasClicked] = useState(false)
 
   useEffect(() => {
-    async () => {
-      const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
-      const namee = await data.json()
-      setPoki(namee)
-      setImg(namee.sprites.back_default)
-    }; 
-    // if(hasClicked){
-    //   setHasClicked(false)
-    // }
+    // async function call() {
+      // const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+      // const namee = await data.json()
+      // setImg(namee.sprites.front_default)
+    // }; 
+        
+      fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+      .then(data => data.json())
+      .then(data => setImg(data.sprites.front_default))
+
+    if(hasClicked){
+      // call()
+      setHasClicked(false)
+    }
   },[hasClicked])
 
   // fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
@@ -24,7 +29,6 @@ function App() {
   // .then(data => setPoki(data))
 
   const show = () => {
-
     setHasClicked(true)
   }
 
@@ -42,11 +46,7 @@ function App() {
           CLICK
         </button>
         <div>
-          {
-            poki && (
-              <img src={img}/>
-            )
-          }
+          <img src={img}/>
         </div>
       </div>
     </>
