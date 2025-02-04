@@ -6,19 +6,19 @@ function App() {
   const array = [
     {
       name : 'cat',
-      url: 'https://www.youtube.com/embed/qolQY2JaKwI'
+      url: 'https://s3.amazonaws.com/codecademy-content/courses/React/react_video-cute.mp4'
     },
     {
       name : 'snail',
-      url: 'https://www.youtube.com/embed/hHeM499YVNc'
+      url: 'https://s3.amazonaws.com/codecademy-content/courses/React/react_video-slow.mp4'
     },
     {
       name : 'deer',
-      url: 'https://www.youtube.com/embed/xDCOoeKF7Ow'
+      url: 'https://s3.amazonaws.com/codecademy-content/courses/React/react_video-fast.mp4'
     },
     {
-      name : 'dog',
-      url: 'https://www.youtube.com/embed/9biWC3pKzE0'
+      name : 'spider',
+      url: 'https://s3.amazonaws.com/codecademy-content/courses/React/react_video-eek.mp4'
     }
   ]
   
@@ -46,7 +46,8 @@ function App() {
      <div>
      { 
       activeName && (
-        <iframe 
+        <video 
+        loop controls autostart="true" autoPlay muted
         src={array.find((obj) => (obj.name === activeName)).url}
         /> 
       )
