@@ -23,7 +23,6 @@ function App() {
   ]
   
   const [activeName, setActiveName] = useState(null)
-  const [vid, setVid] = useState(null)
 
   const change = (name) => {
     setActiveName(name)
