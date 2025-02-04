@@ -2,12 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [activeName, setActiveName] = useState(null)
-
-  const change = (name) => {
-    setActiveName(name)
-  }
-
+  
   const array = [
     {
       name : 'cat',
@@ -26,6 +21,13 @@ function App() {
       url: 'https://www.youtube.com/embed/9biWC3pKzE0'
     }
   ]
+  
+  const [activeName, setActiveName] = useState(null)
+  const [vid, setVid] = useState(null)
+
+  const change = (name) => {
+    setActiveName(name)
+  }
 
   return (
     <>
@@ -42,10 +44,10 @@ function App() {
       </label>
      })}
      <div>
-     {
+     { 
       activeName && (
         <iframe 
-        src={array.find((obj) => (obj.name === activeName)?.url )}
+        src={array.find((obj) => (obj.name === activeName)).url}
         /> 
       )
      }
@@ -56,4 +58,3 @@ function App() {
 }
 
 export default App
-
