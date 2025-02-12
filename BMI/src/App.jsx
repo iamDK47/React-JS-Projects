@@ -17,7 +17,7 @@ function App() {
         </p>
         <div>
           <p> Weight: {weight} kg</p>
-          <input 
+          <input
           type = 'range'
           step={1}
           min={50}
@@ -27,7 +27,7 @@ function App() {
         </div>
         <div>
           <p> Height: {height} cm</p>
-          <input 
+          <input
             type = 'range'
           step={1}
           min={130}
