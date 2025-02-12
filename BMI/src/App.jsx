@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -7,7 +7,9 @@ function App() {
   const [weight, setWeight] = useState(40)
   const [height, setHeight] = useState(130)
 
-  const BMI = Number(height) + Number(weight)
+  const BMI = useMemo(() =>
+    Number(height) + Number(weight), [weight,height]
+  ) 
 
   return (
     <>
