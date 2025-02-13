@@ -29,6 +29,7 @@ function App() {
         </div>
         <div>
           <p> Height: {height} cm</p>
+          <p> s</p>
           <input
             type = 'range'
           step={1}
