@@ -1,9 +1,9 @@
-const a = '4'
-const b = '4'
+const num1 = 2
+const num2 = 2
 
-console.log(a == b)
+function add() {
+  console.log('hre')
+}
 
-const object1 = { key: "value" };
-const object2 = { key: "value" }
-
-console.log(object1 === object2)
+let ans = add
+console.log(ans())
