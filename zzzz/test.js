@@ -2,7 +2,7 @@ const num1 = 2
 const num2 = 2
 
 function add() {
-  console.log('hre')
+  console.log('h')
 }
 
 let ans = add
