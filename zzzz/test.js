@@ -1,9 +1,13 @@
-const num1 = 2
-const num2 = 2
+// const a = function add() {
+//   console.log(2 + 3);
+// };
 
-function add() {
-  console.log('h')
-}
+// let b = a()
 
-let ans = add
-console.log(ans())
+let a = "Hello";
+let b = a;  
+
+b = "World"; 
+
+console.log(a);  
+console.log(b); 
