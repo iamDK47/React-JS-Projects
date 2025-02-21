@@ -50,16 +50,38 @@
 
 // obj.outer();     
 
-const obj1 = {
- name : "dK",
- greet : function (city, country) {
-  console.log(`Hello, I'm ${this.name} from ${city}, ${country}`);
- }
+// setTimeout(() => {
+//  console.log('hello')
+// }, 3000);
+
+function getUser(userId, callback) {
+ setTimeout(() => {
+   console.log("User fetched");
+   callback({ id: userId, name: "Alice" });
+ }, 1000);
 }
 
-const person = new obj1("DK")
-// const person = { name: "Charlie" };
-// obj1.greet.call(person, "New York", "USA");
+function getOrders(user, callback) {
+ setTimeout(() => {
+   console.log("Orders fetched");
+   callback(["Order 1", "Order 2"]);
+ }, 1000);
+}
 
+function getOrderDetails(order, callback) {
+ setTimeout(() => {
+   console.log("Order details fetched");
+   callback({ details: "Details of " + order });
+ }, 1000);
+}
 
-obj1.greet.call(person);
+// ❌ Nested callbacks (Callback Hell)
+// getUser(1, (user) => {
+//  getOrders(user, (orders) => {
+//    getOrderDetails(orders[0], (details) => {
+//      console.log(details);
+//    });
+//  });
+// });
+
+getUser(1,() => getOrders(1, () => getOrderDetails(1 , () => console.log('lol'))))
