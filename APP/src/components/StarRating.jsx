@@ -16,7 +16,7 @@ function StarRating({star = 5}){
  }
 
  const onRate = (Id) => {
-  setRating(setRating)
+  setRating(Id)
   console.log(Id)
  }
 
@@ -29,12 +29,11 @@ function StarRating({star = 5}){
     index +=  1
     return(
      <FaStar 
-     className={ index <= (hover || rating) ? 'active' : 'inActive'}
+     className={ index <= ( hover || rating) ? 'active' : 'inActive'}
      key={index}
      onMouseEnter={() => onMouseEnter(index )}
      onMouseLeave={() => onMouseLeave()}
      onClick={() => onRate(index )}
-     values={rating}
      />
      )
     }
