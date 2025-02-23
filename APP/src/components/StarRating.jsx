@@ -29,15 +29,18 @@ function StarRating({star = 5}){
     index +=  1
     return(
      <FaStar 
-     className={ index <= ( hover || rating) ? 'active' : 'inActive'}
+     className={ index <= (hover || rating) ? 'active' : 'inActive'}
      key={index}
      onMouseEnter={() => onMouseEnter(index )}
      onMouseLeave={() => onMouseLeave()}
      onClick={() => onRate(index )}
+     size={60}
      />
      )
-    }
-   )}
+    })}
+   <p>
+    {(hover || rating)}/10
+   </p>
   </div>
   </>
  )
