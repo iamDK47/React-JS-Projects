@@ -1,0 +1,47 @@
+/* Center the slider */
+.slider-container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ max-width: 800px;
+ margin: 20px auto;
+ padding: 10px;
+ border: 2px solid #ddd;
+ border-radius: 10px;
+ background-color: #f9f9f9;
+}
+
+/* Style the image */
+.slider-image {
+ max-width: 50%;
+ max-height: 500px;
+ object-fit: contain;
+ border-radius: 8px;
+ box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button container */
+.button-container {
+ display: flex;
+ justify-content: center;
+ margin-top: 15px;
+}
+
+/* Style the buttons */
+.slider-button {
+ padding: 10px 20px;
+ margin: 0 10px;
+ border: none;
+ background-color: #007bff;
+ color: white;
+ font-size: 16px;
+ font-weight: bold;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: background 0.3s ease-in-out;
+}
+
+.slider-button:hover {
+ background-color: #0056b3;
+}

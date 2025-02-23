@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import StarRating from './components/StarRating'
+import StarRating from './components/StarRating/StarRating'
+import ImageSlider from './components/ImageSlider/ImageSlider'
 import './App.css'
 
 function App() {
@@ -7,7 +8,9 @@ function App() {
 
   return (
     <>
-     <StarRating star={10}/>
+     {/* <StarRating star={10}/> */}
+
+    <ImageSlider />
     </>
   )
 }
