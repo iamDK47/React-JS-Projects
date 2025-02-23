@@ -1,12 +1,32 @@
-import React from 'react'
+// import React from 'react'
 
-function Btn({name, id, isActive, click}) {
+// function Btn({name, id, isActive, click}) {
+
+//   return (
+//     <div>
+//       <button onClick={() => click(id)}>
+//         {name}
+//         {isActive ? " Y" : " X"}
+//       </button>
+//     </div>
+//   )
+// }
+
+// export default Btn
+
+
+
+import React, { useState } from 'react'
+
+function Btn({name}) {
+
+  const [active, setActive] = useState(false)
 
   return (
     <div>
-      <button onClick={() => click(id)}>
+      <button onClick={() => setActive(!active)}>
         {name}
-        {isActive ? " Y" : " X"}
+        {active ? ' Y' : 'X'}
       </button>
     </div>
   )
