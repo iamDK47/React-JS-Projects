@@ -16,17 +16,34 @@
 
 
 
+// import React, { useState } from 'react'
+
+// function Btn({name}) {
+
+//   const [active, setActive] = useState(false)
+
+//   return (
+//     <div>
+//       <button onClick={() => setActive(!active)}>
+//         {name}
+//         {active ? ' Y' : 'X'}
+//       </button>
+//     </div>
+//   )
+// }
+
+// export default Btn
+
+
 import React, { useState } from 'react'
 
-function Btn({name}) {
-
-  const [active, setActive] = useState(false)
+function Btn({name , active, click , id}) {
 
   return (
     <div>
-      <button onClick={() => setActive(!active)}>
+      <button onClick={() => click(id)}>
         {name}
-        {active ? ' Y' : 'X'}
+        {active ? ' Y' : ' X'}
       </button>
     </div>
   )
