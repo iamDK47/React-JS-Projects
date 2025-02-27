@@ -14,6 +14,7 @@ function App() {
       {/* <ImageSlider />*/}
 
       <LoadMore />
+
     </>
   )
 }
