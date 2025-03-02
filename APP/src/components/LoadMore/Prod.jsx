@@ -7,6 +7,7 @@ const Prod = memo(({products}) =>{
   {products.map((prod,index) =>
    <div key={index}>
      <img src={prod.thumbnail}/>
+     
      {/* <p>{prod.title}</p> */}
    </div>
   )}
