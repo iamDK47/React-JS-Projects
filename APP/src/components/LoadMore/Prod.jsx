@@ -8,7 +8,7 @@ const Prod = memo(({products}) =>{
    <div key={index}>
      <img src={prod.thumbnail}/>
      
-     {/* <p>{prod.title}</p> */}
+     <p>{prod.title}</p>
    </div>
   )}
  </div>
