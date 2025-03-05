@@ -59,13 +59,5 @@ useEffect( () => {
   )
 }
 
-const ProductItem = memo(({ product }) => {
-  return (
-    <div>
-      <img src={product.thumbnail} alt={product.title} />
-      <p>{product.title}</p>
-    </div>
-  )
-})
 
 export default LoadMore
