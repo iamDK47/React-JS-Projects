@@ -1,18 +1,12 @@
 import React from 'react'
 import { memo } from 'react'
 
-const Prod = memo(({products}) =>{
+const Prod = memo(({product}) => {
  return (
-  <div>
-  {products.map((prod,index) =>
-   <div key={index}>
-     <img src={prod.thumbnail}/>
-     
-     
-     <p>{prod.title}</p>
+   <div>
+     <img src={product.thumbnail}  alt={product.title}/>
+     <p>{product.title}</p>
    </div>
-  )}
- </div>
  )
 }) 
 
