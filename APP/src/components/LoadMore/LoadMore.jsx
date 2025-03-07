@@ -59,7 +59,7 @@ useEffect( () => {
        <button
        disabled={disable}
        onClick={() => setCount(count + 1)}>
-        Load More
+        Load 
        </button>
        {disable ? <p>No more Products to Load</p>: null}
     </div>
