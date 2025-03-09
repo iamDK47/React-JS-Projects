@@ -1,5 +1,4 @@
 import React, { useEffect, useState , useMemo } from 'react'
-// import React, { memo } from 'react'
 import Prod from './Prod'
 
 
@@ -11,7 +10,7 @@ function LoadMore() {
   const [disable, setDisable] = useState(false)
 
   const memo = useMemo(() => 
-    products , [products])
+    products.thumbnail , [products])
 
  async function getData() {
   try {
@@ -47,19 +46,18 @@ useEffect( () => {
   return <div>Loading Please Wait</div>
  }
 
-
   return (
    <>
     <div className='main'>
      <div className='products'>
       {memo.map((product) => 
-      <Prod key={product.id} product={product}/>
+      <Prod key={product.id} thumbnail={product.thumbnail} title={product.title}/>
       )}
      </div>
        <button
        disabled={disable}
        onClick={() => setCount(count + 1)}>
-        Load 
+        Load More
        </button>
        {disable ? <p>No more Products to Load</p>: null}
     </div>
