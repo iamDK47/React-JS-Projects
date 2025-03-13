@@ -2,13 +2,15 @@ import React from 'react'
 import { memo } from 'react'
 
 
-const Prod = memo(({ thumbnail, title }) => {
+const Prod = memo(({ product }) => {
+  console.log('component')
   return (
     <div>
-      <img src={thumbnail} />
-      <p>{title}</p>
+      <img src={product.thumbnail} />
+      <p>{product.title}</p>
     </div>
   );
-}, [thumbnail,title]);
+});
 
 export default Prod;
+
