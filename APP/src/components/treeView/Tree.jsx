@@ -8,9 +8,7 @@ function Tree({list}) {
     <div>
       <div className='sideBar'>
         {list.map((obj,index) =>
-        <button>
           <MenuItem item ={obj} key={index}/>
-        </button>
         )}
       </div>
     </div>

@@ -1,15 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Tree from './tree'
 
 function MenuItem({item}) {
+
+ const [click, setClick] = useState(false)
+ 
+
   return (
-    <ul>
-     <p>{item.label}</p>
-     {item && item.children ?
+    <ol>
+     {item.label}
+     <button onClick={() => setClick(prev => !prev)}>
+     {item && item.children ? <span>+</span> : null }
+     </button>
+
+     { click && item && item.children ?
       <Tree list={item.children}/>
-     : null
-     }
-    </ul>
+     : null}
+    </ol>
   )
 }
 
