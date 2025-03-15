@@ -3,6 +3,8 @@ import StarRating from './components/StarRating/StarRating'
 import ImageSlider from './components/ImageSlider/ImageSlider'
 import LoadMore from './components/LoadMore/LoadMore'
 import './App.css'
+import Tree from './components/treeView/tree'
+import Main from './components/treeView/Main'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +15,10 @@ function App() {
 
       {/* <ImageSlider />*/}
 
-      <LoadMore />
+      {/* <LoadMore /> */}
+
+      {/* <Tree /> */}
+      <Main />
 
     </>
   )
