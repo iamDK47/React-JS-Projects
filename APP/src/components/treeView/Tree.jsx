@@ -6,7 +6,7 @@ function Tree({list}) {
 
   return (
     <div>
-      <div className='sideBar'>
+      <div className='menu'>
         {list.map((obj,index) =>
           <MenuItem item ={obj} key={index}/>
         )}

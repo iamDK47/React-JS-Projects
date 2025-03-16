@@ -2,9 +2,10 @@ import React from 'react'
 import Menu from './data'
 import Tree from './tree'
 
+
 function Main() {
   return (
-    <div>
+    <div className='container'>
      <Tree list={Menu}/>
     </div>
   )
