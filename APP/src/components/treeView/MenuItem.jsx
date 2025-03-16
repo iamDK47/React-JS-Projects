@@ -4,16 +4,17 @@ import Tree from './tree'
 function MenuItem({item}) {
 
  const [click, setClick] = useState(false)
- 
 
   return (
     <ol>
      {item.label}
+     { item.children && 
      <button onClick={() => setClick(prev => !prev)}>
-     {item && item.children ? <span>+</span> : null }
+     <span> {click ? '-' : '+' } </span> 
      </button>
+     }
 
-     { click && item && item.children ?
+     { item.children && click ?
       <Tree list={item.children}/>
      : null}
     </ol>
