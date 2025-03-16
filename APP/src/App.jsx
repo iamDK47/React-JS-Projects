@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import './App.css'
 import StarRating from './components/StarRating/StarRating'
 import ImageSlider from './components/ImageSlider/ImageSlider'
 import LoadMore from './components/LoadMore/LoadMore'
-import './App.css'
-import Tree from './components/treeView/tree'
 import Main from './components/treeView/Main'
+import QR from './components/QRCode/QR'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,8 +18,9 @@ function App() {
 
       {/* <LoadMore /> */}
 
-      {/* <Tree /> */}
-      <Main />
+      {/* <Main /> */}
+
+      <QR />
 
     </>
   )
