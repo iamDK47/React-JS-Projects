@@ -5,22 +5,24 @@ import ImageSlider from './components/ImageSlider/ImageSlider'
 import LoadMore from './components/LoadMore/LoadMore'
 import Main from './components/treeView/Main'
 import QR from './components/QRCode/QR'
+import MainTheme from './components/ThemeSwitch/MainTheme'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       {/* <StarRating star={10}/> */}
 
-      {/* <ImageSlider />*/}
+      {/* <ImageSlider /> */}
 
       {/* <LoadMore /> */}
 
       {/* <Main /> */}
 
-      <QR />
+      {/* <QR /> */}
+
+      <MainTheme />
 
     </>
   )
