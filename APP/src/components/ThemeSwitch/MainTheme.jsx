@@ -12,7 +12,7 @@ function MainTheme() {
  }
 
  useEffect(() => {
-  document.body.setAttribute('data-changer', theme);
+  document.body.setAttribute('changer', theme);
 }, [theme]);
 
   return (

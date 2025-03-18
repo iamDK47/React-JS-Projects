@@ -5,7 +5,7 @@
   --button-text: #ffffff;
 }
 
- [data-changer='dark'] {
+ [changer='dark'] {
  --background: #000000;
  --text-primary: #fff;
  --button-bg: #fff;

@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react'
 
 function useStorage(key) {
  const [value, setValue] = useState(() => {
-
-  let currentVal ;
-  
-  currentVal = JSON.parse(
+ 
+  let currentVal = JSON.parse(
    localStorage.getItem(key))
   
    return currentVal;

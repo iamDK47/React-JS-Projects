@@ -6,6 +6,7 @@ import LoadMore from './components/LoadMore/LoadMore'
 import Main from './components/treeView/Main'
 import QR from './components/QRCode/QR'
 import MainTheme from './components/ThemeSwitch/MainTheme'
+import ScrollBar from './components/ScrollBar/ScrollBar'
 
 
 function App() {
@@ -22,7 +23,9 @@ function App() {
 
       {/* <QR /> */}
 
-      <MainTheme />
+      {/* <MainTheme /> */}
+
+      <ScrollBar />
 
     </>
   )
