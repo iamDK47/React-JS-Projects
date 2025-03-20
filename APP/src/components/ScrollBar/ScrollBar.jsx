@@ -1,18 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import './style.css'
 
 function ScrollBar() {
- const [obj, setObj]
+ const [prod, setProd] = useState([])
+ const [bar, setBar] = useState()
 
  useEffect(() => {
-
-  async function call() {
+  const call = async () => {
    try {
     const response = await fetch('https://dummyjson.com/products?limit=100')
-    if (!response.ok) {
-     throw new Error(`ERROR is ${response.status}`)
-    } else {
-     const data = await response.json()
-    }
+    const data = await response.json()
+    setProd(data.products)
+
    } catch (err) {
     console.log("error", err)
    }
@@ -20,8 +19,45 @@ function ScrollBar() {
   call()
  }, [])
 
+ const scrolled = () => {
+  const startHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+  const percentComplete = (document.documentElement.scrollTop / startHeight) * 100
+  setBar(percentComplete)
+
+ }
+
+ useEffect(() => {
+  window.addEventListener('scroll', scrolled)
+  return () => {
+   window.removeEventListener('scroll', () => { })
+  }
+ }, [])
+
+ console.log(bar)
+
  return (
-  <div>Hello</div>
+  <>
+   <div className='Top'>
+    <div className='ProgressContainer'>
+     <div
+      className='scroll-bar'
+      style={{ width: `${bar}%` }}
+     ></div>
+    </div>
+   </div>
+
+
+   <div className='data'>
+    {
+     prod.map((obj, index) =>
+      <p key={index}>
+       {obj.title}
+      </p>
+     )
+    }
+   </div>
+  </>
+
  )
 }
 
