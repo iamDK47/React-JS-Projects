@@ -6,6 +6,7 @@
  background-color: #075b0a ;
  top: 0;
  z-index: 1;
+ left: 0;
 }
 
 .ProgressContainer{
@@ -17,7 +18,7 @@
 .scroll-bar{
  height: 10px;
  background: #8b02b5;
- width: 50%;
+ width: 0%;
 }
 
 .data{

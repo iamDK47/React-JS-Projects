@@ -26,12 +26,12 @@ function ScrollBar() {
 
  }
 
- useEffect(() => {
-  window.addEventListener('scroll', scrolled)
-  return () => {
-   window.removeEventListener('scroll', () => { })
-  }
- }, [])
+ window.addEventListener('scroll', scrolled)
+ // useEffect(() => {
+ //  return () => {
+ //   window.removeEventListener('scroll', () => { })
+ //  }
+ // }, [])
 
  console.log(bar)
 
