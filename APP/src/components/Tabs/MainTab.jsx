@@ -53,8 +53,6 @@ function MainTab() {
   const [activeTab, setActiveTab] = useState(new Array(tabs.length).fill(false))
   const [content, setContent] = useState(0)
 
-  // [0,0,0]
-
   console.log(activeTab)
   const change = (index) => {
     setActiveTab((prev) => { 

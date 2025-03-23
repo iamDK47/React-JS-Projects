@@ -8,6 +8,8 @@ import QR from './components/QRCode/QR'
 import MainTheme from './components/ThemeSwitch/MainTheme'
 import ScrollBar from './components/ScrollBar/ScrollBar'
 import MainTab from './components/Tabs/MainTab'
+import MainPop from './components/Popup/MainPop'
+import Auto from './components/Search/Auto'
 
 
 function App() {
@@ -28,7 +30,11 @@ function App() {
 
       {/* <ScrollBar /> */}
 
-      <MainTab />
+      {/* <MainTab /> */}
+
+      {/* <MainPop /> */}
+
+      <Auto />
 
     </>
   )
