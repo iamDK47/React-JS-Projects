@@ -10,6 +10,7 @@ import ScrollBar from './components/ScrollBar/ScrollBar'
 import MainTab from './components/Tabs/MainTab'
 import MainPop from './components/Popup/MainPop'
 import Auto from './components/Search/Auto'
+import TicTac from './components/TicTac/TicTac'
 
 
 function App() {
@@ -34,7 +35,9 @@ function App() {
 
       {/* <MainPop /> */}
 
-      <Auto />
+      {/* <Auto /> */}
+
+      <TicTac />
 
     </>
   )
