@@ -1,37 +1,56 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Box from './Box'
 import './Style.css'
 
 function TicTac() {
+ const [player, setPlayer] = useState(false)
+ const [boxx, setBoxx] = useState(Array(9).fill(null))
 
- const [clicked, setClicked] = useState(false)
- const [val, setValue] = useState('')
-
- const clickFunc = () => {
-  setClicked(prev => !prev)
-  setValue(clicked ? 'X' : 'O')
+ const clickFunc = (id) => {
+  if(boxx[id] === null){
+   const newBoxx = [...boxx]
+   newBoxx[id] = player ? 'X' : 'O'
+   setBoxx(newBoxx)
+   setPlayer(prev => !prev)
+  }
  }
 
  return (
-  <div>
+  <div className='container'>
+  <div className='Main'>
    <div className='Clm1'>
-    <Box clicker={clickFunc} value={val} />
-    <Box clicker={clickFunc} value={val} />
-    <Box clicker={clickFunc} value={val} />
-
+    {[0, 1, 2].map((index) =>
+      <Box 
+      clicker={ clickFunc} 
+      value={boxx[index]} 
+      id={index} 
+      key={index} 
+      />
+     )}
    </div>
-   <div className='Clm2'>
-    <Box clicker={clickFunc} value={val} />
-    <Box clicker={clickFunc} value={val} />
-    <Box clicker={clickFunc} value={val} />
+   <div className='Clm1'>
+    {[3, 4, 5].map((index) =>
+      <Box 
+      clicker={ clickFunc} 
+      value={boxx[index]} 
+      id={index} 
+      key={index} 
+      />
+     )}
    </div>
-   
-   <div className='Clm3'>
-    <Box clicker={clickFunc} value={val} />
-    <Box clicker={clickFunc} value={val} />
-    <Box clicker={clickFunc} value={val} />
+   <div className='Clm1'>
+    {[6, 7, 8].map((index) =>
+      <Box 
+      clicker={ clickFunc} 
+      value={boxx[index]} 
+      id={index} 
+      key={index} 
+      />
+     )}
    </div>
   </div>
+   <p className='P'>Player {player ? "2's" : "1's"} turn</p>
+     </div>
  )
 }
 

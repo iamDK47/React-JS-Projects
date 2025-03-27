@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import './Style.css'
 
-function Box({clicker, value}) {
+function Box({clicker, value, id}) {
 
   return (
     <div className='box'>
-     <button className='btn' onClick={clicker}>
+     <button className='btn' onClick={() => clicker(id)}>
       {value}
      </button>
     </div>
