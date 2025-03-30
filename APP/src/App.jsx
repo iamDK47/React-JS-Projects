@@ -11,6 +11,7 @@ import MainTab from './components/Tabs/MainTab'
 import MainPop from './components/Popup/MainPop'
 import Auto from './components/Search/Auto'
 import TicTac from './components/TicTac/TicTac'
+import Test from './components/a/Test'
 
 
 function App() {
@@ -37,7 +38,9 @@ function App() {
 
       {/* <Auto /> */}
 
-      <TicTac />
+      {/* <TicTac /> */}
+
+      <Test />
 
     </>
   )
