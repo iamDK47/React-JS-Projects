@@ -103,12 +103,12 @@ export default function TicTac() {
   function getWinner(squares) {
     const winningPatterns = [
       [0, 1, 2],
-      [3, 4, 5],
-      [6, 7, 8],
-      [2, 5, 8],
+      [0, 3, 6],
       [0, 4, 8],
       [2, 4, 6],
-      [0, 3, 6],
+      [2, 5, 8],
+      [3, 4, 5],
+      [6, 7, 8],
       [1, 4, 7],
     ];
 
@@ -127,6 +127,10 @@ export default function TicTac() {
     return null;
   }
 
+  // useEffect(() => {
+    
+  // },[squares])
+
   function handleClick(getCurrentSquare) {
     let cpySquares = [...squares];
     if (getWinner(cpySquares) || cpySquares[getCurrentSquare]) return;
@@ -143,10 +147,12 @@ export default function TicTac() {
   useEffect(() => {
     if (!getWinner(squares) && squares.every((item) => item !== "")) {
       setStatus(`This is a draw ! Please restart the game`);
-    } else if (getWinner(squares)) {
-      setStatus(`Winner is ${getWinner(squares)}. Please restart the game`);
-    } else {
-      setStatus(`Next player is ${isXTurn ? "X" : "O"}`);
+    }
+     else if (getWinner(squares)) {
+       setStatus(`Winner is ${getWinner(squares)}. Please restart the game`);
+      } 
+      else {
+        setStatus(`Next player is ${isXTurn ? "X" : "O"}`);
     }
   }, [squares, isXTurn]);
 

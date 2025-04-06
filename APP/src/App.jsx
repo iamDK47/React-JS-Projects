@@ -11,7 +11,7 @@ import MainTab from './components/Tabs/MainTab'
 import MainPop from './components/Popup/MainPop'
 import Auto from './components/Search/Auto'
 import TicTac from './components/TicTac/TicTac'
-import Test from './components/a/Test'
+import ContextIndex from './components/Feature_Context/ContextIndex'
 
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
 
       {/* <TicTac /> */}
 
-      <Test />
+      <ContextIndex />
 
     </>
   )

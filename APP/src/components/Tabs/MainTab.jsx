@@ -64,6 +64,15 @@ function MainTab() {
   }
   console.log(activeTab)
 
+  const add = () => {
+    tabs.push(
+      {
+        name: 'tab4',
+        content:<div>content for tab4</div>
+      }
+    )
+  }
+
   return (
     <div>
       {tabs.map((tab, index) => {
@@ -78,6 +87,9 @@ function MainTab() {
         <div>
         {tabs[content].content}
       </div>
+      <button onClick={add}>
+        +
+      </button>
 
     </div>
   )
