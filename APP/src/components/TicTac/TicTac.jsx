@@ -156,7 +156,7 @@ export default function TicTac() {
     }
   }, [squares, isXTurn]);
 
-  console.log(squares);
+  // console.log(squares);
 
   return (
     <div className="tic-tac-toe-container">

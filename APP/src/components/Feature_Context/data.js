@@ -1,17 +1,14 @@
 const dummyApiResponse = {
  showImageSlider: true,
- showTicTacToeBoard: true,
+ showTicTacToeBoard: false,
  showTreeView: true,
 };
 
-async function apiResponse() {
- return 
- const response = await Promise.resolve(setTimeout(() => 
- {dummyApiResponse} 
- ,500) )
-}
-
-async function apiResponse() {
- const response = await Promise.resolve(setTimeout(() => dummyApiResponse, 500))
+export default async function apiResponse() {
+ const response = await new Promise( resolve => setTimeout(() => resolve(dummyApiResponse), 500))
  return response;
 }
+
+// export default function apiResponse() {
+//  return new Promise((resolve) => setTimeout(() => resolve(dummyApiResponse),1000))
+// }

@@ -12,6 +12,8 @@ import MainPop from './components/Popup/MainPop'
 import Auto from './components/Search/Auto'
 import TicTac from './components/TicTac/TicTac'
 import ContextIndex from './components/Feature_Context/ContextIndex'
+import Context from './components/Feature_Context/Context'
+import FetchIndex from './components/useFetch/FetchIndex'
 
 
 function App() {
@@ -40,7 +42,11 @@ function App() {
 
       {/* <TicTac /> */}
 
-      <ContextIndex />
+      {/* <Context>
+        <ContextIndex />
+      </Context> */}
+
+      <FetchIndex/>
 
     </>
   )
