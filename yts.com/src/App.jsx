@@ -24,14 +24,14 @@ function App() {
   function Call3() {
     fetch(`https://yts.mx/api/v2/movie_suggestions.json?movie_id=${4}`)
       .then(res => res.json())
-      .then(data => setRes2(data))
+      .then(data => setRes3(data))
       .catch(err => console.log('error', err))
   }
 
   function Call4() {
     fetch(`https://yts.mx/api/v2/movie_parental_guides.json?movie_id=${10}`)
       .then(res => res.json())
-      .then(data => setRes2(data))
+      .then(data => setRes4(data))
       .catch(err => console.log('error', err))
   }
 
